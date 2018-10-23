@@ -1,0 +1,7 @@
+CREATE TABLE `players` (
+  `idPlayers` int(11) NOT NULL,
+  `UserName` varchar(45) NOT NULL,
+  PRIMARY KEY (`idPlayers`),
+  UNIQUE KEY `idPlayers_UNIQUE` (`idPlayers`),
+  UNIQUE KEY `UserName_UNIQUE` (`UserName`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;

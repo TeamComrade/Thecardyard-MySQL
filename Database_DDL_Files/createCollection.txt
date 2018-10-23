@@ -1,0 +1,9 @@
+CREATE TABLE `collection` (
+  `idCards` int(11) NOT NULL,
+  `idPlayers` int(11) NOT NULL,
+  `numOfCopies` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idCards`,`idPlayers`),
+  KEY `player_idx` (`idPlayers`),
+  CONSTRAINT `card` FOREIGN KEY (`idCards`) REFERENCES `cards` (`idcards`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `player` FOREIGN KEY (`idPlayers`) REFERENCES `players` (`idplayers`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;

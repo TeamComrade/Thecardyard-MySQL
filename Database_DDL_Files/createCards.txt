@@ -1,0 +1,6 @@
+CREATE TABLE `cards` (
+  `idCards` int(11) NOT NULL,
+  `cardObjJSON` json NOT NULL,
+  PRIMARY KEY (`idCards`),
+  UNIQUE KEY `idCards_UNIQUE` (`idCards`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
